@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/0ced424d74.js" crossorigin="anonymous"></script>
+  <title>Dance Music para Todos</title>
+</head>
+
+<body>
+  <header>
+    <div class="containerHeader">
+      <a href="index.html" class="logoHeader">MUSIC</a>
+      <nav>
+        <a href="pagInical.html" class="linkPrincipal">Músicas</a>
+        <a href="artistas.html" class="linkPrincipal">Artistas</a>
+        <a href="fale_conosco.html" class="linkPrincipal">Fale Conosco</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="showcase">
+      <div class="showcase-container">
+        <h1 id="titulo-inicial">Dance Music para Todos</h1>
+        <p>Venha conhecer o cenário brasileiro da música eletrônica</p>
+        <a href="pagInical.html"><button id="btn-conhecer">Começar a ouvir</button></a>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <div class="container-footer">
+      <div class="nome">
+        <p><span>Site</span> elaborado por Leonardo de Oliveira Paes</p>
+      </div>
+      <div class="redes">
+        <ul class="ul-redes">
+          <div class="redes-icon">
+            <a href="https://www.facebook.com/djleonardo.paes.3" target="_blank"><i class="fab fa-facebook-square"></i></a>
+          </div>
+          <div class="redes-icon">
+            <a href="https://www.instagram.com/leonardopaeslp/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+          </div>
+          <div class="redes-icon">
+            <a href="https://www.linkedin.com/in/leonardo-paes-668a55207" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+          <div class="redes-icon">
+            <a href="https://github.com/LeonardoOPaes" target="_blank"><i class="fab fa-github-square"></i></a>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const titulo = document.querySelector('#titulo-inicial')
+    function escrever(elemento) {
+      const textoArray = elemento.innerHTML.split('')
+      elemento.innerHTML = ''
+      textoArray.forEach( function(letra, i) {
+        setTimeout(() => elemento.innerHTML += letra, 75 * i)
+      });
+    }
+    escrever(titulo)
+  </script>
+</body>
+
+</html>
